@@ -1,0 +1,27 @@
+.pokemon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    list-style: none;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+.pokemon-list li {
+    width: 20%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: rgb(254, 202, 27);
+    cursor:pointer;
+    text-align: center;
+    border: 10px solid rgb(55, 97, 168);
+    border-radius: 10px;
+}
+
+.container{
+    max-width: 600px;
+    margin:0 auto;
+    padding:50px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
