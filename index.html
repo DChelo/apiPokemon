@@ -1,9 +1,3 @@
-<?php
-session_start();
-if (!isset($_SESSION["user"])) {
-   header("Location: login.php");
-}
-?>
 <!DOCTYPE html>
 <html>
 
@@ -21,10 +15,7 @@ if (!isset($_SESSION["user"])) {
     <ul class="pokemon-list" id="pokemon-list"></ul>
   </div>
   <script src="script/list.js"></script>
-
-  <div class="container">
-    <a href="index.html" class="btn btn-warning">Cerrar sesion</a>
-  </div>
+  
 </body>
 
 </html>

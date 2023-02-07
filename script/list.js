@@ -8,7 +8,7 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
             const pokemonLi = document.createElement("li");
             pokemonLi.innerHTML = pokemon.name;
             pokemonLi.addEventListener("click", function () {
-                window.location.href = `abilities.html?pokemon=${pokemon.name}`;
+                window.location.href = `abilities.php?pokemon=${pokemon.name}`;
             });
             pokeList.appendChild(pokemonLi);
         });

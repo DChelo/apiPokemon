@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user'])) {
+    header("Location: login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -21,5 +30,8 @@
     
       <script src="script/abilities.js"></script>
 
+      <center><form action="logout.php" method="post">
+        <input type="submit" name="logout" value="Cerrar sesión" class="btn btn-danger mt-3">
+    </form></center>
 </body>
 </html>
