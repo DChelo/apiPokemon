@@ -1,22 +1,18 @@
 <?php
 
-// Conexión a la base de datos
 $conn = mysqli_connect("127.0.0.1", "root", "", "pokemon");
 
 if (!$conn) {
     die("Error de conexión: " . mysqli_connect_error());
 }
 
-// Verificar si el formulario ha sido enviado
 if (isset($_POST['submit'])) {
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-    // Hash the password
     $password = password_hash($password, PASSWORD_BCRYPT);
 
-    // Crear usuario
     $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
 
     if (mysqli_query($conn, $sql)) {
